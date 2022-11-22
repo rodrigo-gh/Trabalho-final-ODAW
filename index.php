@@ -19,12 +19,41 @@
                 <div id='noty-c' class="noty-cart"></div>
             </div>
         </div>
-        <div id="home-page" class="d-page" style="display: none ;">
-            <div class="d-main">
-                
+        <div id="home-page" class="d-page"">
+            <div class="d-main d-main-home">
+                <div class="home-panel">
+                    <div class="home-text-container">
+                        <div class="home-tittle">Bem Vindo!</div>
+                        <br>
+                        <div>Sejam bem vindos(as) à nossa loja! Temos diversas opções de doces e salgados à venda, todos produzidos com ótimos ingredientes, muita dedicação e  muito carinho. Abaixo temos uma seleção de itens em oferta, aproveite!</div>
+                    </div>
+                        <br><br>
+                    <div>
+                        <div class="home-offer">OFERTAS</div>
+                        <br><br>
+                        <div class="home-images">
+                            <div>
+                                <div class="home-discount">-50%</div>
+                                <img class="home-image" src="img/salgados.jfif" />
+                            </div>
+                            <div>
+                                <div class="home-discount">-60%</div>
+                                <img class="home-image" src="img/salgados.jfif" />
+                            </div>
+                            <div>
+                                <div class="home-discount">-70%</div>
+                                <img class="home-image" src="img/salgados.jfif" />
+                            </div>
+                            <div>
+                                <div class="home-discount">-80%</div>
+                                <img class="home-image" src="img/salgados.jfif" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="products-page" class="d-page" style="display: none ;">
+        <div id="products-page" class="d-page"">
             <div class="d-main">
                 <div class="products">
                     <br>
@@ -97,21 +126,42 @@
                 </div>
             </div>
         </div>
-        <div id="painel-little-cart" class="d-painel">
+        <div id="painel-little-cart" class="d-painel d-painel-open">
             <div class="d-painel-main">
                 <div class="d-painel-header">
                     <div id='painel-close'></div>
                     <div class="d-painel-title">Carrinho</div>
                 </div>
                 <div class="d-painel-content">
+                    <div class="d-painel-product">
+                        <div class="d-painel-product-img">
+                            <img src="./img/salgados.jfif">
+                        </div>
+                        <div class="d-painel-product-main">
+                            <div class="d-painel-product-main-header">
+                                <div class="d-painel-product-main-header-title">Coxinha</div>
+                                <div class="d-painel-product-main-header-trash"></div>
+                            </div>
+                            <div class="d-painel-product-main-content">
+                                <div class="d-painel-product-main-content-qtd">
+                                    <div>-</div>
+                                    <div>0</div>
+                                    <div>+</div>
+                                </div>
+                                <div class="d-painel-product-main-content-total">
+                                    R$ 35.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="d-painel-footer">
-                    <div>
-                        <div>Total</div>
-                        <div>R$ <span>100.00</span></div>
+                    <div class="d-painel-footer-totalizer">
+                        <div class="d-painel-footer-totalizer-1">Total</div>
+                        <div class="d-painel-footer-totalizer-2">R$ <span>100.00</span></div>
                     </div>
-                    <div>
-                        <button>Finalizar</button>
+                    <div class="d-painel-footer-finality">
+                        <button id="finality">Finalizar</button>
                     </div>
                 </div>
             </div>

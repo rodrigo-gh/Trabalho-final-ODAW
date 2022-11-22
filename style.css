@@ -1,3 +1,4 @@
+
 *{padding: 0; margin: 0; position: relative;}
 
 a{text-decoration: none;}
@@ -41,7 +42,7 @@ body{ width: 100vw; height: 100vh; overflow: hidden;}
     height: 100%;
     position: absolute;
     top: 0;
-    opacity: 0.2;
+    opacity: 0.1;
     background: url('img/background.jpg');
 }
 
@@ -136,50 +137,6 @@ body{ width: 100vw; height: 100vh; overflow: hidden;}
 
 .image { border:2px solid black }
 
-.d-painel {
-    position: fixed;
-    width: 300px;
-    right: -300px;
-    top: 0;
-    height: 100vh;
-    transition: 0.5s;
-    background-color: white;
-    z-index: 10;
-}
-
-.d-painel-main {
-    display: flex;
-    flex-direction: column;
-}
-
-.d-painel.d-painel-open{
-    right: 0px;
-}
-
-.d-painel-header {
-    padding: 10px;
-}
-
-.d-painel-content {
-    flex-grow: 1;
-}
-
-.d-painel-footer {
-    height: 100px;
-}
-
-#painel-close{
-    background: url('img/xmark-solid.svg');
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-#painel-close:hover {
-    color: red;    
-}
-
 .itens-contacts {
     display: flex;
     flex-direction: column;
@@ -225,3 +182,155 @@ body{ width: 100vw; height: 100vh; overflow: hidden;}
     flex-grow: 1;
     font-size: 16px;
 }
+
+.d-main-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-panel {
+
+}
+
+.home-tittle {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.home-description {
+    
+}
+
+.home-images {
+    display: flex;
+    gap: 10px;
+}
+
+.home-image {
+    position: relative;
+    width: 200px;
+}
+
+.home-offer {
+    font-size: 30px;
+    color: rgb(0, 139, 182)
+}
+
+.home-text-container {
+    width: 500px;
+    text-align: left;
+}
+
+.home-discount {
+    background-color: rgb(0, 227, 72);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 30px;
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    z-index: 1;
+
+}
+/* Painel */
+
+
+.d-painel {
+    position: fixed;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: white;
+    z-index: 10;
+}
+
+.d-painel-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.d-painel.d-painel-open{
+    right: 0px;
+}
+
+.d-painel-header {
+    padding: 10px;
+}
+
+.d-painel-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0px;
+    padding: 10px 15px; 
+}
+
+.d-painel-footer {
+    height: 100px;
+    padding: 10px 15px; 
+}
+
+#painel-close{
+    background: url('img/xmark-solid.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#painel-close:hover {
+    color: red;    
+}
+
+.d-painel-title{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.d-painel-footer-totalizer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(209, 209, 209);
+    padding: 10px 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.d-painel-footer-totalizer-1{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.d-painel-footer-finality {
+    width: 100%;
+}
+
+#finality {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: rgb(15, 216, 216);
+    font-size: 22px;
+}
+
+.d-painel-product {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(185, 185, 185);
+}
+
+.d-painel-product-img{
+    width: 100px;
+}
+/*end Painel*/
