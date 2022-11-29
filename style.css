@@ -135,7 +135,10 @@ body{ width: 100vw; height: 100vh; overflow: hidden;}
 }
 
 
-.image { border:2px solid black }
+.image { 
+    border:2px solid black ;
+    width: 240px
+}
 
 .itens-contacts {
     display: flex;
@@ -326,11 +329,9 @@ body{ width: 100vw; height: 100vh; overflow: hidden;}
 
 .d-painel-product {
     display: flex;
-    padding: 10px;
-    background-color: rgb(185, 185, 185);
 }
 
 .d-painel-product-img{
-    width: 100px;
+    width: 120px;
 }
 /*end Painel*/

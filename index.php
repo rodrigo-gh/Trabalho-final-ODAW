@@ -1,3 +1,28 @@
+<?php
+require('conexao.php');
+
+$query = "SELECT p.name, p.description, c.src FROM product p join image c on p.id = c.idProduct Limit 1";
+$result = mysqli_query($conexao, $query);
+
+/* Produtos */
+$products = '';
+
+while ($row = mysqli_fetch_row($result)) {
+    $products .= '<div class="product">';
+    $products .= '<div class="product-image">';
+    $products .= '<img class="image" src="'.$row[2].'" /></div>';
+    $products .= '<div class="product-description">';
+    $products .= '<div>'.$row[0].'</div>';
+    $products .= '<div class="product-text">'.$row[1].'</div>';
+    $products .= '<div class="product-button">';
+    $products .= '<button class="button">comprar</button>';
+    $products .= '</div></div></div>';
+}
+
+// for ($i=0; $i<10; $i++0{
+//     $ofertas
+// })
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,23 +83,9 @@
                 <div class="products">
                     <br>
                     <div>Produtos</div>
-                    <br>
-                    <hr>
-                    <br>
+                    <br><hr><br>
                     <div class="itens-products">
                         <div class="items">
-                        <div class="product">
-                                <div class="product-image">
-                                    <img class="image" src="img/salgados.jfif" />
-                                </div>
-                                <div class="product-description">
-                                    <div>Coxinha</div>
-                                    <div class="product-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, repudiandae.</div>
-                                    <div class="product-button">
-                                        <button class="button">comprar</button>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="product">
                                 <div class="product-image">
                                     <img class="image" src="img/salgados.jfif" />
@@ -87,6 +98,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <?=$products?>
                         </div>
                     </div>
                 </div>
