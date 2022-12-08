@@ -1,7 +1,7 @@
 <?php
 require('conexao.php');
 
-$query = "SELECT p.name, p.description, c.src FROM product p join image c on p.id = c.idProduct Limit 1";
+$query = "SELECT p.name, p.description, c.src, p.id FROM product p join image c on p.id = c.idProduct";
 $result = mysqli_query($conexao, $query);
 
 /* Produtos */
@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_row($result)) {
     $products .= '<div>'.$row[0].'</div>';
     $products .= '<div class="product-text">'.$row[1].'</div>';
     $products .= '<div class="product-button">';
-    $products .= '<button class="button">comprar</button>';
+    $products .= '<a class="button" href="produtoDetalhes.php?p='.$row[3].'">comprar</a>';
     $products .= '</div></div></div>';
 }
 
@@ -86,18 +86,6 @@ while ($row = mysqli_fetch_row($result)) {
                     <br><hr><br>
                     <div class="itens-products">
                         <div class="items">
-                            <div class="product">
-                                <div class="product-image">
-                                    <img class="image" src="img/salgados.jfif" />
-                                </div>
-                                <div class="product-description">
-                                    <div>Coxinha</div>
-                                    <div class="product-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, repudiandae.</div>
-                                    <div class="product-button">
-                                        <button class="button">comprar</button>
-                                    </div>
-                                </div>
-                            </div>
                             <?=$products?>
                         </div>
                     </div>

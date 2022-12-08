@@ -12,9 +12,27 @@ const toggleControllPainel = () => {
 openCart.addEventListener('click', toggleControllPainel)
 closeCart.addEventListener('click', toggleControllPainel)
 
+const finality = document.getElementById('finality')
+
+const finalityBuy = () => {
+    window.location.href = "telaFinal.php";
+}
+finality.addEventListener('click', finalityBuy)
+
 const getUserCart = () => {
     window.localStorage.getItem('user-cart')
 }
+
+const saveProductInLocalStore = (name, qtd, value) => {
+    const uC = JSON.parse(localStorage.getItem("user-cart") || "[]");
+
+    const p = {name, qtd, value}
+
+    uC.push(p)
+    console.log(uC);
+    window.localStorage.setItem('user-cart', JSON.stringify(uC))
+}
+
 
 const addItemsInCart = () => {
     const items = window.localStorage.getItem('items-cart')
@@ -52,4 +70,6 @@ const removeItemsInCart = () => {
     }
 }
 
-removeItemsInCart()
+
+
+// removeItemsInCart()
